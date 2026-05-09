@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Help Desk Ticketing System</h1>
+<p>Welcome! Submit and track IT support tickets.</p>
+<h2>Dashboard</h2>
+{% for count in counts %}
+<p>{{ count[0] }}: {{ count[1] }}</p>
+{% endfor %}
+{% endblock %}

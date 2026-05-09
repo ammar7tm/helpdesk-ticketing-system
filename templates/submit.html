@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Submit a New Ticket</h1>
+<form method="POST" action="/submit">
+    <label>Title:</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description"></textarea><br><br>
+
+    <label>Priority:</label><br>
+    <select name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select><br><br>
+
+    <button type="submit">Submit Ticket</button>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>All Tickets</h1>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Actions</th>
+    </tr>
+    {% for ticket in tickets %}
+    <tr>
+        <td>{{ ticket[0] }}</td>
+        <td>{{ ticket[1] }}</td>
+        <td>{{ ticket[3] }}</td>
+        <td>{{ ticket[4] }}</td>
+        <td>{{ ticket[5] }}</td>
+        <td>
+            <a href="/update/{{ ticket[0] }}/Open">Open</a>
+            <a href="/update/{{ ticket[0] }}/In Progress">In Progress</a>
+            <a href="/update/{{ ticket[0] }}/Resolved">Resolved</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
